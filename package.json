@@ -1,0 +1,50 @@
+{
+  "name": "demo-components",
+  "version": "0.0.1",
+  "description": "%DESCRIPTION%",
+  "license": "MIT",
+  "repository": "VovanR/demo-components",
+  "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "build:css": "postcss src/index.css --output /dev/null --no-map --watch",
+    "start": "webpack --watch",
+    "test": "xo",
+    "prepush": "npm test",
+    "precommit": "npm test",
+    "release-patch": "mversion patch",
+    "release-minor": "mversion minor",
+    "release-major": "mversion major",
+    "deploy": "npm run build && gh-pages -d example"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "conventional-changelog-cli": "^1.3.5",
+    "cross-env": "^5.1.3",
+    "cz-conventional-changelog": "^2.1.0",
+    "gh-pages": "^1.1.0",
+    "husky": "^0.14.3",
+    "mversion": "^1.10.1",
+    "postcss-cli": "^5.0.0",
+    "postcss-import": "^11.1.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-style-guide": "^0.14.0",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.1.0",
+    "xo": "^0.20.3"
+  },
+  "peerDependencies": {},
+  "bugs": {
+    "url": "https://github.com/VovanR/demo-components/issues"
+  },
+  "homepage": "https://github.com/VovanR/demo-components#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
