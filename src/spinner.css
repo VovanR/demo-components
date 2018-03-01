@@ -3,23 +3,12 @@
 
 @title Spinner
 
-Loading spinner
-
+```html
 <span class="spinner"></span>
-
-    <span class="spinner"></span>
-
 <span class="spinner spinner_classic"></span>
-
-    <span class="spinner spinner_classic"></span>
-
 <span class="spinner spinner_razor"></span>
-
-    <span class="spinner spinner_razor"></span>
-
 <span class="spinner spinner_donut"></span>
-
-    <span class="spinner spinner_donut"></span>
+```
 */
 .spinner {
   --speed: 0.75s;
@@ -48,6 +37,7 @@ Loading spinner
   animation-name: rotate;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  box-sizing: border-box;
 }
 
 .spinner_razor {
